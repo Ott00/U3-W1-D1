@@ -1,4 +1,4 @@
-const randomNumber: number = Math.floor(Math.random() * 11);
+const randomNumber: number = Math.floor(Math.random() * (100 - 1) + 1);
 console.log(randomNumber);
 
 // const checkWinner: any = (guess1: number, guess2: number) => {
@@ -30,6 +30,7 @@ const checkWinner: any = (guess1: number, guess2: number) => {
   const absoluteDifference1: number = Math.abs(randomNumber - guess1);
   const absoluteDifference2: number = Math.abs(randomNumber - guess2);
 
+  console.log("Giocatore 1: " + guess1 + "; " + "Giocatore 2: " + guess2);
   randomNumber === guess1
     ? console.log("Il giocatore 1 ha indovinato il numero")
     : randomNumber === guess2
@@ -47,4 +48,4 @@ const checkWinner: any = (guess1: number, guess2: number) => {
       );
 };
 
-checkWinner(6, 1);
+checkWinner(13, 78);
